@@ -46,7 +46,9 @@ body {
 	font-family: var(--font-raleway);
 	overflow-x: hidden;
 }
-
+.wrapper {
+	overflow-x: hidden;
+}
 .hero {
 	width: calc(var(--index) * 46);
 	position: absolute;
@@ -103,4 +105,37 @@ body {
 }
 .text-block__p {
 	line-height: 1.75;
+}
+@media (max-width: 991px) {
+	.container {
+		padding: 0 3vw;
+	}
+	.hero {
+		top: 3vh;
+		width: calc(var(--index) * 66);
+	}
+	.main-header {
+		height: 60vh;
+		min-height: 400px;
+	}
+	.main-title {
+		font-size: calc(var(--index) * 18);
+		bottom: 0;
+	}
+	.gallery__item {
+		max-width: calc(var(--index) * 44);
+	}
+}
+@media (max-width: 480px) {
+	.hero {
+		width: calc(var(--index) * 86);
+		left: 17vw;
+	}
+	.text-block__h {
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+	.text-block__p {
+		line-height: 1.2;
+	}
 }
